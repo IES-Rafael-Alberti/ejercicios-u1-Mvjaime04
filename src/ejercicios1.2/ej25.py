@@ -1,5 +1,5 @@
 def main():
-    fecha=int(input("Escribe tu fecha de nacimiento(dd/mm/aaaa): "))
+    fecha=input("Escribe tu fecha de nacimiento(dd/mm/aaaa): ")
     partes=fecha.split("/")
 
     if len(partes) !=3:
@@ -13,6 +13,5 @@ def main():
         print("formato incorrecto.usa el formato dd/mm/aaaa")
 
     print("naciste el dia {} del mes {} del año {}".format(dia,mes,año))
-
 if __name__=="__main__":
     main()
