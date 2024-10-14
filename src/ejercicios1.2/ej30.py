@@ -1,18 +1,28 @@
-inicio = int(input("Dame un número inicial: "))
-incremento = int(input("Dame un incremento de números: "))
-total = int(input("Dame un total de la serie: "))
+def main():
+    inicio = int(input("Introduce un número: "))
+    incremento = int(input("Introduce el incremento: "))
+    total = int(input("Introduce el número final de la serie: "))
 
-if incremento <= 0 or total <= 0:
-    print("Error: el incremento y el total deben ser mayores que cero.")
-else:
+    while incremento <= 0:
+        print("Incremento no puede ser 0 o menor a cero")
+        incremento = int(input("Introduce el incremento: "))
 
-    serie = []
+    while total <= 0:
+        print("El segundo numero no puede ser 0 o menor a cero")
+        total = int(input("Introduce el segundo número: "))
+
+    serie = ""
+
     for i in range(total):
-        numero = inicio + i*incremento
-        if numero<=total:
-            serie.append(str(numero))
-        else numero>=total:
-            resultado = "..".join(serie)
-            print(f"SERIE => {resultado}")
-
-
+        cont = inicio + (i * incremento)  
+        if i == 0:
+            serie += str(cont) + '-'
+        elif i == total - 1:
+            serie += '-' + str(cont)
+        elif i == 1:
+            serie += str(cont)
+        else:
+            serie += '..' + str(cont)
+    print(f"SERIE => {serie}")
+if __name__=="__main__":
+    main()
