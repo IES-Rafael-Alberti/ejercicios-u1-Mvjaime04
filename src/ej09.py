@@ -1,0 +1,1 @@
+print("la suma de tus números es de "+ str(int(input("introduce Num1: ")) +int(input("introduce Num2: ")) +int(input("Introduce Num3: "))))
