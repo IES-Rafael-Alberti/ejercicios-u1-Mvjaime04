@@ -1,16 +1,19 @@
+def sumar_enteros(entero):
+    if entero > 0:
+    
+        suma = entero * (entero + 1) // 2
+    
+    
+        return(f"La suma de los enteros desde 1 hasta {entero} es: {suma}")
+    else:
+        return("Por favor, introduce un número entero positivo.") 
+    
+def main():
+    n=int(input("introduce n( n debe ser un num entero positivo): "))
 
-n=int(input("introduce n( n debe ser un num entero positivo): "))   
+    resultado=sumar_enteros(n)
 
-if n > 0:
+    print(resultado)
     
-    suma = n * (n + 1) // 2
-    
-    
-    print(f"La suma de los enteros desde 1 hasta {n} es: {suma}")
-
-else:
-    
-    print("Por favor, introduce un número entero positivo.") 
-    
-
-    
+if __name__=="__main__":
+    main()
